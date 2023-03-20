@@ -1,0 +1,124 @@
+<html>
+<head>
+  <title>Multilevel Dropdown Menu with Pure CSS</title>
+  <style>
+    body{
+      margin: 0px;
+    }
+    .parent {
+      display: inline-block;
+      position: relative;
+      line-height: 30px;
+      background-color: #FFE1BF;
+      border-right:#CCC 1px solid;
+    }
+    .parent a{
+      margin: 10px;
+      color: #000;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .parent:hover > ul {
+      display:block;
+      position:absolute;
+    }
+    .child {
+      display: none;
+    }
+    .child li {
+      color: #ffffff;
+      background-color: #77B;
+      line-height: 30px;
+      border-bottom:#fff 1px solid;
+      border-right:#fff 1px solid;
+      width:100%;
+    }
+    .child li a{
+      color: #ffffff;
+    }
+    ul{
+      list-style: none;
+      margin: 0;
+      padding: 0px;
+      min-width:10em;
+    }
+    ul ul ul{
+      left: 100%;
+      top: 0;
+      margin-left:1px;
+    }
+    li:hover {
+      background-color: #77b;
+      color: #ffffff;
+    }
+    li:hover >a{
+      color: #ffffff;
+      font-weight: bold;
+    }
+    .parent li:hover {
+      background-color: #ff790e;
+    }
+    .expand{
+      font-size:12px;
+      font-weight: bold;
+      float:right;
+      margin-right:5px;
+    }
+    #menu{
+      display: flex;
+      background-color: #FFE1BF;
+    }
+  </style>
+</head>
+<body>
+  <ul id="menu">
+    <li class="parent"><a href="#">Popular Toys</a>
+      <ul class="child">
+        <li class="parent"><a href="#">Video Games <span class="expand">&raquo;</span></a>
+          <ul class="child">
+            <li><a href="#">Car</a></li>
+            <li><a href="#">Bike Race</a></li>
+            <li><a href="#">Fishing</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Barbies</a></li>
+        <li><a href="#">Teddy Bear</a></li>
+        <li><a href="#">Golf Set</a></li>
+      </ul>
+    </li>
+    <li class="parent"><a href="#">Recent Toys</a>
+      <ul class="child">      
+        <li><a href="#">Yoyo</a></li>
+        <li><a href="#">Doctor Kit</a></li>
+        <li class="parent"><a href="#">Fun Puzzle<span class="expand">&raquo;</span></a>
+          <ul class="child">
+            <li><a href="#" nowrap>Cards</a></li>
+            <li><a href="#" nowrap>Numbers</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Uno Cards</a></li>
+      </ul>
+    </li>
+    <li class="parent"><a href="#">Toys Category</a>
+      <ul class="child">      
+        <li><a href="#">Battery Toys</a></li>
+        <li class="parent"><a href="#">Remote Toys <span class="expand">&raquo;</span></a>
+          <ul class="child">
+            <li class = "parent"><a href="#">Cars<span class="expand">&raquo;</span></a>
+              <ul class="child">
+                <li><a href="#">New Cars</a></li>
+                <li><a href="#">Used Cars</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Aeroplane</a></li>
+            <li><a href="#">Helicopter</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Soft Toys</a>
+        </li>
+        <li><a href="#">Magnet Toys</a></li>
+      </ul>
+    </li>
+  </ul>
+</body>
+</html>
